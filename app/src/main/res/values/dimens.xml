@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="settings_text_size">28sp</dimen>
+    <dimen name="button_padding">36dp</dimen>
+    <dimen name="name_text_size">26sp</dimen>
+    <dimen name="image_view_width">130dp</dimen>
+    <dimen name="image_view_height">130dp</dimen>
+    <dimen name="name_margin_top">16dp</dimen>
+    <dimen name="button_margin_end">16dp</dimen>
+
+    <dimen name="settings_text_margin_start">24dp</dimen>
+    <dimen name="settings_margin_top">28dp</dimen>
+    <dimen name="profession_text_margin_top">8dp</dimen>
+    <dimen name="profession_text_size">16sp</dimen>
+    <dimen name="information_text_margin_top">16dp</dimen>
+    <dimen name="information_text_size">20dp</dimen>
+    <dimen name="my_contacts_button_margin_bottom">16dp</dimen>
+    <dimen name="my_contacts_button_margin_right">8dp</dimen>
+    <dimen name="my_contacts_button_margin_left">8dp</dimen>
+    <dimen name="edit_profile_button_margin_bot">8dp</dimen>
+    <dimen name="bottom_text_message_margin_bot">20dp</dimen>
+    <dimen name="bottom_text_message_text_size">18sp</dimen>
+
+</resources>
+<!--For example-->
+<!--<dimen name="margin_top_main_btn_show_20dp">20dp</dimen>-->
+<!--<dimen name="margin_bottom_main_tv_poem_name_20dp">20dp</dimen>-->
+<!--<dimen name="text_size_main_tv_poem_name_16sp">16sp</dimen>-->
+<!--<dimen name="margin_top_main_tv_poem_name_30dp">30dp</dimen>-->
+<!--<dimen name="text_size_main_tv_toolbar_name_18sp">18sp</dimen>-->

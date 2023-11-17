@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/profile_top_side"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMyProfileSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/settings_text_margin_start"
+            android:layout_marginTop="@dimen/settings_margin_top"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:text="@string/settings"
+            android:textColor="@color/profile_text_white"
+            android:textSize="@dimen/settings_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMyProfileLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/button_margin_end"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:paddingLeft="@dimen/button_padding"
+            android:paddingRight="@dimen/button_padding"
+            android:text="@string/log_out"
+            android:textColor="@color/profile_text_white"
+            android:background="@drawable/log_out_button_style"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMyProfileSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMyProfileSettings" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMyProfileMainPhoto"
+            android:layout_width="@dimen/image_view_width"
+            android:layout_height="@dimen/image_view_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.368"
+            app:srcCompat="@drawable/profile_photo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMyProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/name_margin_top"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:text="@string/name_text"
+            android:textColor="@color/profile_text_white"
+            android:textSize="@dimen/name_text_size"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/ivMyProfileMainPhoto"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/ivMyProfileMainPhoto"
+            app:layout_constraintTop_toBottomOf="@+id/ivMyProfileMainPhoto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMyProfileProfession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profession_text_margin_top"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:text="@string/profession_text"
+            android:textColor="@color/profile_text_gray"
+            android:textSize="@dimen/profession_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/tvMyProfileName"
+            app:layout_constraintStart_toStartOf="@+id/tvMyProfileName"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyProfileName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMyProfileInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/information_text_margin_top"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:text="@string/information_text"
+            android:textColor="@color/profile_text_gray"
+            android:textSize="@dimen/information_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/tvMyProfileProfession"
+            app:layout_constraintStart_toStartOf="@+id/tvMyProfileProfession"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyProfileProfession" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/profile_bot_side"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constLayoutTop"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMyProfileViewContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_contacts_button_margin_left"
+            android:layout_marginRight="@dimen/my_contacts_button_margin_right"
+            android:layout_marginBottom="@dimen/my_contacts_button_margin_bottom"
+            android:background="@drawable/my_contacts_button_style"
+            android:text="@string/my_contacts_button_text"
+            android:textColor="@color/profile_text_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMyProfileEditProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/edit_profile_button_margin_bot"
+            android:text="@string/edit_profile_button_text"
+            android:background="@drawable/edit_profile_button_style"
+
+            app:layout_constraintBottom_toTopOf="@+id/btnMyProfileViewContact"
+            app:layout_constraintEnd_toEndOf="@+id/btnMyProfileViewContact"
+            app:layout_constraintStart_toStartOf="@+id/btnMyProfileViewContact" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMyProfileBottomMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bottom_text_message_margin_bot"
+            android:fontFamily="@font/PatuaOne_Regular"
+            android:text="@string/bottom_message_text"
+            android:textSize="@dimen/bottom_text_message_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/btnMyProfileEditProfile"
+            app:layout_constraintEnd_toEndOf="@+id/btnMyProfileEditProfile"
+            app:layout_constraintStart_toStartOf="@+id/btnMyProfileEditProfile" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

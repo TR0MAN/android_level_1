@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    // Variant for API 26 and above-->
+<!--    <font android:fontStyle="normal"    -->
+<!--        android:fontWeight="400"-->
+<!--        android:font="@font/Pacifico_Regular"/>-->
+
+<!--    // Variant for API 16 and above-->
+    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/PatuaOne_Regular" />
+    <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/Pattaya_Regular" />
+</font-family>
