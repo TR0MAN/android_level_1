@@ -8,6 +8,6 @@
 <!--        android:font="@font/Pacifico_Regular"/>-->
 
 <!--    // Variant for API 16 and above-->
-    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/PatuaOne_Regular" />
-    <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/Pattaya_Regular" />
+    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/patuaone_regular" />
+    <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/patuaone_regular" />
 </font-family>

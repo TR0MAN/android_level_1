@@ -3,6 +3,7 @@ package com.example.android_level_1
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.Toast
 import com.example.android_level_1.databinding.ActivityMainBinding
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//        binding.btnMyProfileEditProfile.on
 
     }
 
