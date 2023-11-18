@@ -14,12 +14,15 @@
     <dimen name="profession_text_size">16sp</dimen>
     <dimen name="information_text_margin_top">16dp</dimen>
     <dimen name="information_text_size">20dp</dimen>
+
     <dimen name="my_contacts_button_margin_bottom">16dp</dimen>
     <dimen name="my_contacts_button_margin_right">8dp</dimen>
     <dimen name="my_contacts_button_margin_left">8dp</dimen>
-    <dimen name="edit_profile_button_margin_bot">8dp</dimen>
     <dimen name="bottom_text_message_margin_bot">20dp</dimen>
     <dimen name="bottom_text_message_text_size">18sp</dimen>
+
+    <dimen name="edit_profile_button_text_size">20sp</dimen>
+    <dimen name="edit_profile_button_margin_bot">8dp</dimen>
 
 </resources>
 <!--For example-->

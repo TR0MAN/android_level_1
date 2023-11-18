@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding.btnMyProfileEditProfile.on
-
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
