@@ -3,5 +3,5 @@
     android:shape="rectangle">
     <solid android:color="@color/profile_top_side"/>
     <corners android:radius="5dp"/>
-    <stroke android:color="@color/profile_contact_button_orange" android:width="2dp"/>
+    <stroke android:color="@color/profile_text_gray" android:width="2dp"/>
 </shape>

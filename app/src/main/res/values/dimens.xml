@@ -3,17 +3,17 @@
     <dimen name="settings_text_size">28sp</dimen>
     <dimen name="button_padding">36dp</dimen>
     <dimen name="name_text_size">26sp</dimen>
-    <dimen name="image_view_width">130dp</dimen>
-    <dimen name="image_view_height">130dp</dimen>
+    <dimen name="image_view_width">120dp</dimen>
+    <dimen name="image_view_height">120dp</dimen>
     <dimen name="name_margin_top">16dp</dimen>
     <dimen name="button_margin_end">16dp</dimen>
 
     <dimen name="settings_text_margin_start">24dp</dimen>
-    <dimen name="settings_margin_top">28dp</dimen>
+    <dimen name="settings_margin_top">24dp</dimen>
     <dimen name="profession_text_margin_top">8dp</dimen>
     <dimen name="profession_text_size">16sp</dimen>
     <dimen name="information_text_margin_top">16dp</dimen>
-    <dimen name="information_text_size">20dp</dimen>
+    <dimen name="information_text_size">20sp</dimen>
 
     <dimen name="my_contacts_button_margin_bottom">16dp</dimen>
     <dimen name="my_contacts_button_margin_right">8dp</dimen>

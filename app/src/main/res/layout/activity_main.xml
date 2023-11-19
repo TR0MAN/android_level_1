@@ -39,8 +39,8 @@
             android:paddingLeft="@dimen/button_padding"
             android:paddingRight="@dimen/button_padding"
             android:text="@string/log_out"
-            android:textColor="@color/profile_text_white"
-            android:background="@drawable/log_out_button_style"
+            android:textColor="@color/logout_button_custom_text_color"
+            android:background="@drawable/logout_button_custom_background"
             app:layout_constraintBottom_toBottomOf="@+id/tvMyProfileSettings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvMyProfileSettings" />
@@ -54,7 +54,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.368"
+            app:layout_constraintVertical_bias="0.382"
             app:srcCompat="@drawable/profile_photo" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -114,8 +114,8 @@
             android:id="@+id/btnMyProfileViewContact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/my_contacts_button_margin_left"
-            android:layout_marginRight="@dimen/my_contacts_button_margin_right"
+            android:layout_marginStart="@dimen/my_contacts_button_margin_left"
+            android:layout_marginEnd="@dimen/my_contacts_button_margin_right"
             android:layout_marginBottom="@dimen/my_contacts_button_margin_bottom"
             android:background="@drawable/my_contacts_button_style"
             android:text="@string/my_contacts_button_text"
