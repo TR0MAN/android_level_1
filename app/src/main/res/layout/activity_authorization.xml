@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:text="Already have an account?"
         android:textColor="@color/profile_text_gray"
         android:textSize="16sp"
@@ -37,23 +37,23 @@
         android:id="@+id/tvAuthorizationAdditonalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="4dp"
         android:gravity="center_horizontal"
+        android:text="By clicking Register you agree to our Terms\n and Conditions"
         android:textColor="@color/profile_text_white"
         android:textSize="14sp"
-        android:text="By clicking Register you agree to our Terms\n and Conditions"
         app:layout_constraintBottom_toTopOf="@+id/tvAuthorizationQuestionText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAuthorizationRegister"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="63dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="14dp"
         android:text="R E G I S T E R"
         android:textSize="18sp"
         android:background="@drawable/register_button_style_selector"
@@ -67,7 +67,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="or"
         android:textColor="@color/profile_text_white"
         android:textSize="20sp"
@@ -81,7 +81,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/google_button_style_selector"
         android:clickable="true"
         android:focusable="true"
@@ -111,58 +111,97 @@
         android:id="@+id/chkAuthorizationRememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="46dp"
+        android:layout_marginBottom="36dp"
         android:text="Remember me"
         android:textColor="@color/profile_text_gray"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtonImitator"
         app:layout_constraintStart_toStartOf="@+id/linearLayoutButtonImitator" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPasswordContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        app:helperText="required"
+        app:helperTextTextColor="@color/profile_contact_button_orange"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/profile_text_gray"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:counterTextColor="@color/profile_text_white"
         app:layout_constraintBottom_toTopOf="@+id/chkAuthorizationRememberMe"
         app:layout_constraintEnd_toEndOf="@+id/linearLayoutButtonImitator"
-        app:layout_constraintStart_toStartOf="@+id/linearLayoutButtonImitator" />
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutButtonImitator">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputPasswordForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="22dp"
+            android:textColor="@color/profile_text_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:text="Password"
         android:textColor="@color/profile_text_gray"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputPasswordContainer"
+        app:layout_constraintStart_toStartOf="@+id/textInputPasswordContainer" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmailContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        app:helperText="required"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/profile_text_gray"
 
-    <TextView
+        app:helperTextTextColor="@color/profile_contact_button_orange"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textInputPasswordContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputPasswordContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/textInputEmailForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="22dp"
+            android:textColor="@color/profile_text_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:text="E-mail"
         android:textColor="@color/profile_text_gray"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEmailContainer"
+        app:layout_constraintStart_toStartOf="@+id/textInputEmailContainer" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -174,7 +213,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

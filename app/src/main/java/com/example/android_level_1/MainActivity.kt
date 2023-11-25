@@ -3,7 +3,9 @@ package com.example.android_level_1
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.view.MotionEvent
+import android.view.View
 import android.widget.Toast
 import com.example.android_level_1.databinding.ActivityMainBinding
 
@@ -15,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
 
     }
