@@ -1,5 +1,6 @@
 package com.example.android_level_1
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_level_1.databinding.ActivityAuthorizationBinding
 
@@ -20,10 +22,25 @@ class AuthorizationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         customSymbolTextInputForm()
-
         emailFormObserver()
         passwordFormObserver()
+        registration()
 
+    }
+    // переход к MainActivity после удачной регистрации
+    private fun registration() {
+
+        binding.btnAuthorizationRegister.setOnClickListener {
+            if (emailValidator() && passwordValidator() == getString(R.string.response_ok)) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra(Const.EMAIL, binding.textInputEmailForm.text.toString())
+                intent.putExtra(Const.PASSWORD, binding.textInputPasswordForm.text.toString())
+                startActivity(intent)
+            } else {
+                Toast.makeText(this,
+                    getString(R.string.empty_password_or_email_fields), Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     // отслеживание изменений в поле e-mail, с последующей валидацией
@@ -61,7 +78,7 @@ class AuthorizationActivity : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { }
             override fun afterTextChanged(s: Editable?) {
-                if (passwordValidator() != "All fine") {
+                if (passwordValidator() != getString(R.string.response_ok)) {
                     binding.textInputPasswordContainer.helperText = passwordValidator()
                     binding.textInputPasswordContainer.setHelperTextColor(ColorStateList
                         .valueOf(getColor(R.color.profile_contact_button_orange)))
@@ -99,7 +116,6 @@ class AuthorizationActivity : AppCompatActivity() {
             Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_include_wrong_spec_symbols)
         }
-        // TODO ДОДЕЛАТЬ
         if (password.matches(".*[ ].*".toRegex())) {
             return getString(R.string.error_include_white_space)
         }
@@ -115,7 +131,7 @@ class AuthorizationActivity : AppCompatActivity() {
                 return object : CharSequence by transformation {
                     override fun get(index: Int): Char {
                         return if (transformation[index] == '\u2022') {
-                            '●'
+                            Const.DOT
                         } else {
                             transformation[index]
                         }

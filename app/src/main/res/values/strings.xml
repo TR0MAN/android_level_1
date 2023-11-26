@@ -21,5 +21,20 @@
     <string name="error_contain_special_symbol"><![CDATA[Must contain 1 special symbol (!@#$%^&*)]]></string>
     <string name="error_include_wrong_spec_symbols"><![CDATA[Must not include symbols (~`()_+|?/.{}[],<>=-)]]></string>
     <string name="error_include_white_space">Must not include a white space</string>
+    <string name="unknown_user">Unknown User</string>
+    <string name="empty_password_or_email_fields">Password or E-mail fields have errors</string>
+
+    <string name="AuthorizationQuestionText">Already have an account?</string>
+    <string name="AuthorizationSingInText">Sing in</string>
+    <string name="AuthorizationRegisterButtonText">R E G I S T E R</string>
+    <string name="AuthorizationTextOr">or</string>
+    <string name="AuthorizationButtonGoogleText">G O O G L E</string>
+    <string name="AuthorizationRememberMeText">Remember me</string>
+    <string name="AuthorizationPasswordText">Password</string>
+    <string name="AuthorizationTextEmail">E-mail</string>
+    <string name="AuthorizationHelperText">Fill out the profile and go to the application</string>
+    <string name="AuthorizationGreetingsText">Let\'s get acquainted</string>
+    <string name="AuthorizationAdditionalText">By clicking Register you agree to our Terms\n and Conditions</string>
+
 
 </resources>
