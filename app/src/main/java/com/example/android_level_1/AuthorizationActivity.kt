@@ -36,6 +36,7 @@ class AuthorizationActivity : AppCompatActivity() {
                 intent.putExtra(Const.EMAIL, binding.textInputEmailForm.text.toString())
                 intent.putExtra(Const.PASSWORD, binding.textInputPasswordForm.text.toString())
                 startActivity(intent)
+                overridePendingTransition(R.anim.horiz_from_right_to_center, R.anim.horiz_from_center_to_left)
             } else {
                 Toast.makeText(this,
                     getString(R.string.empty_password_or_email_fields), Toast.LENGTH_SHORT).show()

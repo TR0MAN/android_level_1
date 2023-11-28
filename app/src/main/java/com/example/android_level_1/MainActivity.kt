@@ -18,7 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         getUserName(intent)
-        binding.btnMyProfileLogOut.setOnClickListener { finish() }
+        binding.btnMyProfileLogOut.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.horiz_from_left_to_center, R.anim.horiz_from_center_to_right)
+        }
 
     }
 
@@ -28,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             this.substringBefore('@')
         }
         Log.d("TAG", receivedEmail)
-//        val partOfEmail = receivedEmail.substringBefore('@')
         if (receivedEmail.contains('_') || receivedEmail.contains('-')
             || receivedEmail.contains('.')) {
             // TODO проверить не стоит ли спец символ первым или последним
