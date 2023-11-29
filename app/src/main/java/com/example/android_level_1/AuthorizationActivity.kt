@@ -1,6 +1,7 @@
 package com.example.android_level_1
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -16,10 +17,15 @@ import com.example.android_level_1.databinding.ActivityAuthorizationBinding
 
 class AuthorizationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthorizationBinding
+    private var sharedPreferences: SharedPreferences? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthorizationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sharedPreferences = getSharedPreferences(Const.PREFERENCES_SETTINGS, MODE_PRIVATE)
+        autoLoginCheck()
 
         customSymbolTextInputForm()
         emailFormObserver()
@@ -27,6 +33,19 @@ class AuthorizationActivity : AppCompatActivity() {
         registration()
 
     }
+
+    // проверка, нет ли сохраненных записей по ключу "email"
+    // если есть, достаем данные (адрес почты) по ключу и переходим сразу на страницу профиля
+    // с подстановкой данных взятых из адреса почты
+    private fun autoLoginCheck() {
+        if (sharedPreferences?.contains(Const.PREFERENCES_EMAIL) == true) {
+            startActivity(Intent(this, MainActivity::class.java).apply {
+                val email = sharedPreferences?.getString(Const.PREFERENCES_EMAIL,Const.PREFERENCES_DEFAULT_TEXT)
+                putExtra(Const.EMAIL, email)
+            })
+        }
+    }
+
     // переход к MainActivity после удачной регистрации
     private fun registration() {
 
@@ -34,9 +53,18 @@ class AuthorizationActivity : AppCompatActivity() {
             if (emailValidator() && passwordValidator() == getString(R.string.response_ok)) {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra(Const.EMAIL, binding.textInputEmailForm.text.toString())
-                intent.putExtra(Const.PASSWORD, binding.textInputPasswordForm.text.toString())
                 startActivity(intent)
                 overridePendingTransition(R.anim.horiz_from_right_to_center, R.anim.horiz_from_center_to_left)
+
+                // проверка отмечена ли галочка "Rememder Me", запись/удаление данных в sharedPreferences
+                if (binding.chkAuthorizationRememberMe.isChecked) {
+                    val editor = sharedPreferences?.edit()
+                    editor?.putString(Const.PREFERENCES_EMAIL, binding.textInputEmailForm.text.toString())
+                    editor?.apply()
+                } else {
+                    val edit = sharedPreferences?.edit()
+                    edit?.remove(Const.PREFERENCES_EMAIL)?.apply()
+                }
             } else {
                 Toast.makeText(this,
                     getString(R.string.empty_password_or_email_fields), Toast.LENGTH_SHORT).show()

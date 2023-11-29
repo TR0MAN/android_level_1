@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val receivedEmail = (intent?.getStringExtra(Const.EMAIL) ?: getString(R.string.unknown_user)).run {
             this.substringBefore('@')
         }
-        Log.d("TAG", receivedEmail)
+        Log.d("TAG", "incoming Intent message = $receivedEmail")                            // DELETE
         if (receivedEmail.contains('_') || receivedEmail.contains('-')
             || receivedEmail.contains('.')) {
             // TODO проверить не стоит ли спец символ первым или последним
