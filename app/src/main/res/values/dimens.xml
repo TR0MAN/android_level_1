@@ -26,7 +26,7 @@
 
     <dimen name="AuthorizationQuestionTextSize">16sp</dimen>
     <dimen name="AuthorizationQuestionTextMarginBottom">10dp</dimen>
-    <dimen name="AuthorizationQuestionTextMarginStart">80dp</dimen>
+    <dimen name="AuthorizationQuestionTextMarginStart">10dp</dimen>
 
     <dimen name="AuthorizationSingInTextMarginStart">16dp</dimen>
     <dimen name="AuthorizationSingInTextSize">16sp</dimen>

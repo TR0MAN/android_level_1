@@ -169,5 +169,25 @@ class AuthorizationActivity : AppCompatActivity() {
             }
         }
     }
+
+    // сохраняем состояние полей ввода и checkbox
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            putString(Const.STATE_EMAIL_FIELD, binding.textInputEmailForm.text.toString())
+            putString(Const.STATE_PASSWORD_FIELD, binding.textInputPasswordForm.text.toString())
+            putBoolean(Const.STATE_CHECKBOX, binding.chkAuthorizationRememberMe.isChecked)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    // восстанавливаем состояние полей ввода и checkbox
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        savedInstanceState.run {
+            binding.textInputEmailForm.setText(getString(Const.STATE_EMAIL_FIELD))
+            binding.textInputPasswordForm.setText(getString(Const.STATE_PASSWORD_FIELD))
+            binding.chkAuthorizationRememberMe.isChecked = getBoolean(Const.STATE_CHECKBOX)
+        }
+    }
 }
 
