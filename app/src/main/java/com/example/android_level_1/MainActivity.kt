@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.android_level_1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,15 +23,13 @@ class MainActivity : AppCompatActivity() {
             finish()
             overridePendingTransition(R.anim.horiz_from_left_to_center, R.anim.horiz_from_center_to_right)
         }
-
     }
 
-    // получение данных со страницы регистрации, первых 2 слова использутся в качестве имени/фамилии
+    // получение данных со страницы регистрации, первых 2 слова используется в качестве имени/фамилии
     private fun getUserName(intent: Intent?) {
         val receivedEmail = (intent?.getStringExtra(Const.EMAIL) ?: getString(R.string.unknown_user)).run {
             this.substringBefore('@')
         }
-        Log.d("TAG", "incoming Intent message = $receivedEmail")                            // DELETE
         if (receivedEmail.contains('_') || receivedEmail.contains('-')
             || receivedEmail.contains('.')) {
             // TODO проверить не стоит ли спец символ первым или последним
@@ -43,14 +42,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-
-        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Toast.makeText(this, "NOW ORIENTATION PORTRAIT", Toast.LENGTH_SHORT).show()
-        }
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            Toast.makeText(this, "NOW ORIENTATION LANDSCAPE", Toast.LENGTH_SHORT).show()
-        }
-    }
 }

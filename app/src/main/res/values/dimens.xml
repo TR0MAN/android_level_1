@@ -74,6 +74,8 @@
 
     <dimen name="AuthorizationAdditionalTextMarginBottom">4dp</dimen>
     <dimen name="AuthorizationAdditionalTextSize">14sp</dimen>
+    <dimen name="constraint_layout_top_min_height">330dp</dimen>
+    <dimen name="constraint_layout_bottom_min_height">330dp</dimen>
 
 
 </resources>

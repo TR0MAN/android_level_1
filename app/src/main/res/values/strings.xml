@@ -28,13 +28,14 @@
     <string name="AuthorizationSingInText">Sing in</string>
     <string name="AuthorizationRegisterButtonText">R E G I S T E R</string>
     <string name="AuthorizationTextOr">or</string>
-    <string name="AuthorizationButtonGoogleText">G O O G L E</string>
+    <string name="AuthorizationButtonGoogleText" translatable="false">G O O G L E</string>
     <string name="AuthorizationRememberMeText">Remember me</string>
     <string name="AuthorizationPasswordText">Password</string>
     <string name="AuthorizationTextEmail">E-mail</string>
     <string name="AuthorizationHelperText">Fill out the profile and go to the application</string>
     <string name="AuthorizationGreetingsText">Let\'s get acquainted</string>
     <string name="AuthorizationAdditionalText">By clicking Register you agree to our Terms\n and Conditions</string>
+    <string name="email_and_password_helper_text">required</string>
 
 
 </resources>

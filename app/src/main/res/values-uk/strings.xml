@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Android_level_1</string>
+    <string name="hello">Hello Android</string>
+    <string name="settings"><b>Налаштування</b></string>
+    <string name="log_out">Вийти</string>
+    <string name="name_text">Ткаченко Роман</string>
+    <string name="profession_text">студент курсу з android</string>
+    <string name="information_text">місце для додаткової інформації</string>
+    <string name="my_contacts_button_text">Перегляд моїх контактів</string>
+    <string name="edit_profile_button_text">Редагувати профіль</string>
+    <string name="bottom_message_text">Зайдіть в налаштування і заповніть профіль</string>
+    <string name="email_and_password_helper_text">очікується</string>
+
+    <string name="response_ok">Все добре</string>
+    <string name="response_wrong_email">Некоректна адреса ел. пошти</string>
+
+<!--    состояния проверки пароля-->
+    <string name="error_min_8_symbols_password">Пароль мінімум 8 символів</string>
+    <string name="error_upper_case_symbol">Має бути 1 маленька буква</string>
+    <string name="error_lower_case_symbol">Має бути 1 велика буква</string>
+    <string name="error_contain_number">Має бути 1 цифра (0-9)</string>
+    <string name="error_contain_special_symbol"><![CDATA[Має бути 1 спец. символ (!@#$%^&*)]]></string>
+    <string name="error_include_wrong_spec_symbols"><![CDATA[Не має бути символів (~`()_+|?/.{}[],<>=-)]]></string>
+    <string name="error_include_white_space">Не має бути символу \"пробіл\"</string>
+    <string name="unknown_user">Невідомий гість</string>
+    <string name="empty_password_or_email_fields">В полі пароль або ел. пошта є помилка</string>
+
+    <string name="AuthorizationQuestionText">Вже маєте аккаунт?</string>
+    <string name="AuthorizationSingInText">Увійти</string>
+    <string name="AuthorizationRegisterButtonText">З А Р Е Є С Т Р У В А Т И С Ь</string>
+    <string name="AuthorizationTextOr">або</string>
+    <string name="AuthorizationButtonGoogleText">G O O G L E</string>
+    <string name="AuthorizationRememberMeText">Запам\'ятати мене</string>
+    <string name="AuthorizationPasswordText">Пароль</string>
+    <string name="AuthorizationTextEmail">Електронна пошта</string>
+    <string name="AuthorizationHelperText">Заповніть профіль і перейдіть до застосунку</string>
+    <string name="AuthorizationGreetingsText">Давайте знайомитись</string>
+    <string name="AuthorizationAdditionalText">Натиснувши «Зареєструватись», ви погоджуєтеся\n з нашими положеннями та умовами</string>
+
+
+
+</resources>

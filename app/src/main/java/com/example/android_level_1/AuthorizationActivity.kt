@@ -11,8 +11,11 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.widget.CompoundButtonCompat
 import com.example.android_level_1.databinding.ActivityAuthorizationBinding
 
 class AuthorizationActivity : AppCompatActivity() {
@@ -126,23 +129,18 @@ class AuthorizationActivity : AppCompatActivity() {
             return getString(R.string.error_min_8_symbols_password)
         }
         if (!password.matches(".*[A-Z].*".toRegex())) {
-            Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_upper_case_symbol)
         }
         if (!password.matches(".*[a-z].*".toRegex())) {
-            Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_lower_case_symbol)
         }
         if (!password.matches(".*[0-9].*".toRegex())) {
-            Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_contain_number)
         }
         if (!password.matches(".*[!@#\$%^&*].*".toRegex())) {
-            Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_contain_special_symbol)
         }
         if (password.matches(".*[~`()_+|\\?/.{}\\[\\],<>=\\-].*".toRegex())) {
-            Log.d("TAG", "REGEX = ${password.matches(".*[A-Z].*".toRegex())}")
             return getString(R.string.error_include_wrong_spec_symbols)
         }
         if (password.matches(".*[ ].*".toRegex())) {
